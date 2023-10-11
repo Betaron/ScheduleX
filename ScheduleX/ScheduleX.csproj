@@ -1,10 +1,25 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net7.0-windows</TargetFramework>
-    <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="D:\repos\ScheduleX\ScheduleX\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="D:\repos\ScheduleX\ScheduleX\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Icons\" />
+    <Folder Include="MVVM\Model\" />
+    <Folder Include="MVVM\View\" />
+    <Folder Include="MVVM\ViewModel\" />
+    <Folder Include="Theme\" />
+  </ItemGroup>
 
 </Project>
