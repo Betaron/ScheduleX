@@ -4,9 +4,25 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ScheduleX"
+		xmlns:controls="clr-namespace:ScheduleX.MVVM.View.Components"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="1200">
     <Grid>
-        
-    </Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="auto"/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+
+		<StackPanel Grid.Column="0">
+			<controls:IconTextRadioButton
+				IconGeometry="{StaticResource ResourceKey=fluent_calendar-edit-20-filled}"
+				Text="Создать"/>
+			<controls:IconTextRadioButton 
+				IconGeometry="{StaticResource ResourceKey=fluent_collections-add-20-filled}"
+				Text="Добавить"/>
+			<controls:IconTextRadioButton 
+				IconGeometry="{StaticResource ResourceKey=fluent_notebook-eye-20-filled}"
+				Text="Посмотреть"/>
+		</StackPanel>
+	</Grid>
 </Window>
