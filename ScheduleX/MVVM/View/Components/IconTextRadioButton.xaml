@@ -6,7 +6,9 @@
              xmlns:local="clr-namespace:ScheduleX.MVVM.View.Components"
              mc:Ignorable="d" 
              x:Name="iconTextRadioButton">
-	<RadioButton>
+	<RadioButton 
+		GroupName="{Binding ElementName=iconTextRadioButton, Path=GroupName}"
+		IsChecked="{Binding ElementName=iconTextRadioButton, Path=IsChecked}">
 		<RadioButton.Content>
 			<StackPanel Orientation="Horizontal">
 				<Path 

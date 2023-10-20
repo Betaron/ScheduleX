@@ -15,12 +15,16 @@
 
 		<StackPanel Grid.Column="0">
 			<controls:IconTextRadioButton
+				GroupName="SideMenu"
+				IsChecked="True"
 				IconGeometry="{StaticResource ResourceKey=fluent_calendar-edit-20-filled}"
 				Text="Создать"/>
 			<controls:IconTextRadioButton 
+				GroupName="SideMenu"
 				IconGeometry="{StaticResource ResourceKey=fluent_collections-add-20-filled}"
 				Text="Добавить"/>
 			<controls:IconTextRadioButton 
+				GroupName="SideMenu"
 				IconGeometry="{StaticResource ResourceKey=fluent_notebook-eye-20-filled}"
 				Text="Посмотреть"/>
 		</StackPanel>
