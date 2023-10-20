@@ -2,12 +2,26 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:ScheduleX"
+			 xmlns:viewModel="clr-namespace:ScheduleX.MVVM.ViewModel"
+			 xmlns:view="clr-namespace:ScheduleX.MVVM.View"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
 				<ResourceDictionary Source="/Icons/IconsDictionary.xaml"/>
 			</ResourceDictionary.MergedDictionaries>
+
+			<DataTemplate DataType="{x:Type viewModel:CreateViewModel}">
+				<view:CreateView/>
+			</DataTemplate>
+
+			<DataTemplate DataType="{x:Type viewModel:AddViewModel}">
+				<view:AddView/>
+			</DataTemplate>
+
+			<DataTemplate DataType="{x:Type viewModel:ObseveViewModel}">
+				<view:ObserveView/>
+			</DataTemplate>
 		</ResourceDictionary>
     </Application.Resources>
 </Application>

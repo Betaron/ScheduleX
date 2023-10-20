@@ -7,15 +7,16 @@
              mc:Ignorable="d" 
              x:Name="iconTextRadioButton">
 	<RadioButton 
-		GroupName="{Binding ElementName=iconTextRadioButton, Path=GroupName}"
-		IsChecked="{Binding ElementName=iconTextRadioButton, Path=IsChecked}">
+		Command="{Binding Command, ElementName=iconTextRadioButton}"
+		GroupName="{Binding GroupName, ElementName=iconTextRadioButton}"
+		IsChecked="{Binding IsChecked, ElementName=iconTextRadioButton}">
 		<RadioButton.Content>
 			<StackPanel Orientation="Horizontal">
 				<Path 
-					Data="{Binding ElementName=iconTextRadioButton, Path=IconGeometry}" 
+					Data="{Binding IconGeometry, ElementName=iconTextRadioButton}" 
 					Fill="Black"
 					Stretch="Fill"/>
-				<TextBlock Text="{Binding ElementName=iconTextRadioButton, Path=Text}"/>
+				<TextBlock Text="{Binding Text, ElementName=iconTextRadioButton}"/>
 			</StackPanel>
 		</RadioButton.Content>
 	</RadioButton>

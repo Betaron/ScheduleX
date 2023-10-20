@@ -1,9 +1,9 @@
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 
 namespace ScheduleX.MVVM.View.Components;
-
 public partial class IconTextRadioButton : UserControl
 {
     public static readonly DependencyProperty TextProperty =
@@ -38,6 +38,14 @@ public partial class IconTextRadioButton : UserControl
             new FrameworkPropertyMetadata(null)
         );
 
+    public static readonly DependencyProperty CommandProperty =
+        DependencyProperty.Register(
+            "Command",
+            typeof(ICommand),
+            typeof(UserControl),
+            new FrameworkPropertyMetadata(null)
+        );
+
     public string Text
     {
         get => (string)GetValue(TextProperty);
@@ -60,6 +68,12 @@ public partial class IconTextRadioButton : UserControl
     {
         get => (bool)GetValue(IsCheckedProperty);
         set => SetValue(IsCheckedProperty, value);
+    }
+
+    public ICommand Command
+    {
+        get => (ICommand)GetValue(CommandProperty);
+        set => SetValue(CommandProperty, value);
     }
 
     public IconTextRadioButton()

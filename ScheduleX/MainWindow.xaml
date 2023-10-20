@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ScheduleX"
 		xmlns:controls="clr-namespace:ScheduleX.MVVM.View.Components"
+		xmlns:viewModel="clr-namespace:ScheduleX.MVVM.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="1200">
+	<Window.DataContext>
+		<viewModel:MainViewModel/>
+	</Window.DataContext>
+	
     <Grid>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="auto"/>
@@ -15,18 +20,25 @@
 
 		<StackPanel Grid.Column="0">
 			<controls:IconTextRadioButton
+				Command="{Binding CreateViewCommand}"
 				GroupName="SideMenu"
 				IsChecked="True"
 				IconGeometry="{StaticResource ResourceKey=fluent_calendar-edit-20-filled}"
 				Text="Создать"/>
 			<controls:IconTextRadioButton 
+				Command="{Binding AddViewCommand}"
 				GroupName="SideMenu"
 				IconGeometry="{StaticResource ResourceKey=fluent_collections-add-20-filled}"
 				Text="Добавить"/>
 			<controls:IconTextRadioButton 
+				Command="{Binding ObserveViewCommand}"
 				GroupName="SideMenu"
 				IconGeometry="{StaticResource ResourceKey=fluent_notebook-eye-20-filled}"
 				Text="Посмотреть"/>
 		</StackPanel>
+
+		<ContentControl
+			Grid.Column="1"
+			Content="{Binding CurrentView}"/>
 	</Grid>
 </Window>
