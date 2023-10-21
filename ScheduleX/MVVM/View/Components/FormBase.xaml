@@ -1,0 +1,39 @@
+<UserControl x:Class="ScheduleX.MVVM.View.Components.FormBase"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ScheduleX.MVVM.View.Components"
+             mc:Ignorable="d"
+			 x:Name="formBase">
+	<StackPanel>
+		<StackPanel Orientation="Horizontal">
+			<TextBlock Text="{Binding Title, ElementName=formBase}"/>
+			<Path Data="{Binding Icon, ElementName=formBase}" Fill="Black"/>
+		</StackPanel>
+		<Expander>
+			<StackPanel>
+				<ContentControl Content="{Binding Form, ElementName=formBase}"/>
+				<StackPanel Orientation="Horizontal">
+					<Button>
+						<Button.Content>
+							<StackPanel Orientation="Horizontal">
+								<Path Data="{StaticResource fluent_checkmark-20-filled}" Fill="Black"/>
+								<TextBlock Text="Подтвердить"/>
+							</StackPanel>
+						</Button.Content>
+					</Button>
+					<Button>
+						<Button.Content>
+							<StackPanel Orientation="Horizontal">
+								<Path Data="{StaticResource ResourceKey=fluent_dismiss-20-filled}" Fill="Black"/>
+								<TextBlock Text="Отменить"/>
+							</StackPanel>
+						</Button.Content>
+					</Button>
+				</StackPanel>
+			</StackPanel>
+		</Expander>
+		<TextBlock Text="Поиск"/>
+	</StackPanel>
+</UserControl>

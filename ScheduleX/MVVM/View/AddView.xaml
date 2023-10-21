@@ -2,10 +2,20 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:controls="clr-namespace:ScheduleX.MVVM.View.Components" 
              xmlns:local="clr-namespace:ScheduleX.MVVM.View"
              mc:Ignorable="d">
-    <Grid>
-		<TextBlock Text="Страница добавления"/>
-	</Grid>
+	<DockPanel>
+		<controls:FormBase 
+			Title="Дисциплины"
+			Icon="{StaticResource ResourceKey=fluent_book-add-20-filled}">
+			<controls:FormBase.Form>
+				<StackPanel Orientation="Horizontal">
+					<TextBlock Text="Название"/>
+					<TextBox/>
+				</StackPanel>
+			</controls:FormBase.Form>
+		</controls:FormBase>
+	</DockPanel>
 </UserControl>
