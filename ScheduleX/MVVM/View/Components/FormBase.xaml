@@ -9,7 +9,10 @@
 	<StackPanel>
 		<StackPanel Orientation="Horizontal">
 			<TextBlock Text="{Binding Title, ElementName=formBase}"/>
-			<Path Data="{Binding Icon, ElementName=formBase}" Fill="Black"/>
+			<Path 
+				Data="{Binding Icon, ElementName=formBase}" 
+				Fill="Black"
+				Stretch="Uniform"/>
 		</StackPanel>
 		<Expander>
 			<StackPanel>
@@ -18,7 +21,10 @@
 					<Button>
 						<Button.Content>
 							<StackPanel Orientation="Horizontal">
-								<Path Data="{StaticResource fluent_checkmark-20-filled}" Fill="Black"/>
+								<Path 
+									Data="{StaticResource fluent_checkmark-20-filled}" 
+									Fill="Black"
+									Stretch="Uniform"/>
 								<TextBlock Text="Подтвердить"/>
 							</StackPanel>
 						</Button.Content>
@@ -26,7 +32,10 @@
 					<Button>
 						<Button.Content>
 							<StackPanel Orientation="Horizontal">
-								<Path Data="{StaticResource ResourceKey=fluent_dismiss-20-filled}" Fill="Black"/>
+								<Path 
+									Data="{StaticResource ResourceKey=fluent_dismiss-20-filled}" 
+									Fill="Black"
+									Stretch="Uniform"/>
 								<TextBlock Text="Отменить"/>
 							</StackPanel>
 						</Button.Content>
